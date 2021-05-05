@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP5 Practica Form</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <h1 class="title">Contacto</h1>
+    <h2 class="subtitle">Completa tus datos</h2>
+    <form action="#" class="form" onsubmit="validar(event)">
+        <fieldset class="fieldset_pi">
+            <!-- fieldset personal info -->
+            <legend>Información personal:</legend>
+            <div class="form__names">
+                <div class="form__field">
+                    <label for="nombre" class="form__label">Nombre <br> </label>
+                    <input type="text" placeholder="Escriba su nombre" id="nombre" class="form__input">
+                    <label class="alert__nombre" id="alert__nombre">Campo vacio</label>
+                </div>
+                <div class="form__field">
+                    <label for="apellido" class="form__label">Apellido </label><br>
+                    <input type="text" placeholder="Escriba su apellido" id="apellido" class="form__input">
+                    <label class="alert__apellido" id="alert__apellido">Campo vacio</label>
+                </div>
+            </div>
+            <div class="form__field">
+                <label for="edad" class="form__label">Edad <br> </label>
+                <input type="number" id="edad" class="input__edad" min="0" max="80"><br>
+                <label class="alert__edad" id="alert__edad">Se requiere mayor de 18</label>
+            </div><br>
+
+            <div>
+                <input type="radio" name="genero" class="rbutton">
+                <label for="genero" class="form__label">Masculino</label>
+            </div>
+
+            <div>
+                <input type="radio" name="genero" class="rbutton">
+                <label for="genero" class="form__label">Femenino</label>
+            </div>
+
+            <div>
+                <input type="radio" name="genero" class="rbutton">
+                <label for="genero" class="form__label">Otro</label>
+            </div>
+
+        </fieldset>
+
+        <fieldset class="fieldset_ai">
+            <!--fieldset additional info-->
+            <legend>Información adicional:</legend>
+            <label for="empresa" class="form__label">Empresa:<br> </label>
+            <input type="text" placeholder="Nombre de la empresa" id="empresa" class="form__input">
+        </fieldset>
+
+        <input type="submit" class="button__submit" value="Submit">
+        <input type="button" class="button__clear" value="Limpiar" onclick="limpiar()">
+    </form>
+
+    <script src="js/scripts.js"></script>
+
+</body>
+
+
+</html>

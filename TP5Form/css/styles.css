@@ -1,0 +1,56 @@
+body{
+    background-image: radial-gradient(circle,  #5d6d7e , #212f3c );
+    background-repeat: no-repeat;
+    margin: 0;
+    color: #eee;
+    min-height: 100vh;
+}
+
+.title{
+    margin-top: 10px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2em;
+    text-decoration: underline 1px;
+}
+
+.subtitle{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.5em;
+    text-decoration: underline 1px;
+}
+
+
+.form{
+    margin: auto;
+    background-color: black;
+    font-family: monospace;
+    width: 30vh;
+    margin-top: 0;
+}
+
+.input__edad{
+    width: 23%;
+}
+
+.alert__nombre, .alert__apellido, .alert__edad{
+    color: red;
+    visibility: hidden;
+}
+
+.button__submit, .button__clear{
+    background-color: grey;
+    color: #eee;
+    border-radius: 15px;
+}
+
+.button__submit:hover, .button__clear:hover{
+    background-color: slategrey;
+    width: 30%   
+}
+
+
+
+
+
