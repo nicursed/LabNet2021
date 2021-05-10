@@ -45,7 +45,7 @@ namespace EF.UI
                     territoryDescription = Console.ReadLine();
                     Console.WriteLine("Inserte el RegionId");
                     regionId = int.Parse(Console.ReadLine());
-                    territoriesLogic.Add(territoryId, territoryDescription, regionId);
+                    territoriesLogic.Add(new Territories { TerritoryDescription = territoryDescription, RegionID = regionId, TerritoryID = territoryId });
                     ShowMenu();
                     break;
                 case 2:
@@ -53,7 +53,7 @@ namespace EF.UI
                     territoryId = Console.ReadLine();
                     Console.WriteLine("Inserte el TerritoryDescription a modificar");
                     territoryDescription = Console.ReadLine();
-                    territoriesLogic.Update(territoryId, territoryDescription);
+                    territoriesLogic.Update(new Territories { TerritoryDescription = territoryDescription, TerritoryID = territoryId });
                     ShowMenu();
                     break;
                 case 3:
