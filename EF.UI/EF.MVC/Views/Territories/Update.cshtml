@@ -1,0 +1,15 @@
+﻿@model EF.MVC.Models.TerritoriesView
+
+@{
+    ViewBag.Title = "Territories page";
+}
+
+<h1>Update</h1>
+
+@using (Html.BeginForm("Update", "Territories", FormMethod.Post))
+{
+    <label>Territory ID existente: </label> @Html.TextBoxFor(t => t.Id)<br>
+    <label>Descripcion: </label> @Html.TextBoxFor(t => t.Descripcion)<br>
+    <input type="submit" class="btn btn-success" value="Guardar" />
+}
+

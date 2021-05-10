@@ -1,0 +1,15 @@
+﻿@model EF.MVC.Models.TerritoriesView
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+@using (Html.BeginForm("Delete", "Territories", FormMethod.Post))
+{
+
+    <label>Ingrese un ID a eliminar: </label> @Html.TextBoxFor(t => t.Id) <br>
+    <input type="submit" class="btn btn-primary" value="Borrar" />
+}
+
