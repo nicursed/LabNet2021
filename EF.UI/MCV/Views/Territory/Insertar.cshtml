@@ -1,0 +1,14 @@
+﻿@model MCV.Models.TerritoriesView
+@{
+    ViewBag.Title = "Insertar";
+}
+<h1>Vista para insertar un item en la BD</h1>
+
+@using (Html.BeginForm("Insertar", "Territory", FormMethod.Post))
+{
+
+    <label>TerritoryID</label>@Html.TextBoxFor(t => t.ID, new { type = "number", minlength = "4" })
+    <label>TerritoryDescription</label>@Html.TextBoxFor(t => t.desc)
+    <label>RegionID</label>@Html.TextBoxFor(t => t.regiondId, new { type = "number", min = "0", step = "1" })
+    <input type="submit" class="btn btn-primary" value="Insertar"/>
+}

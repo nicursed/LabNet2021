@@ -1,0 +1,12 @@
+﻿@model MCV.Models.TerritoriesView
+@{
+    ViewBag.Title = "Actualizar";
+}
+
+@using (Html.BeginForm("Actualizar", "Territory", FormMethod.Post))
+{
+
+    <label>Busca TerritoryID</label>@Html.TextBoxFor(t => t.ID, new { type = "number", min = "0", max = "99999", step = "1" })
+    <label>TerritoryDescription</label>@Html.TextBoxFor(t => t.desc)
+    <input type="submit" class="btn btn-primary" value="Actualizar" />
+}

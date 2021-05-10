@@ -1,0 +1,25 @@
+﻿@model List<MCV.Models.TerritoriesView>
+@{
+    ViewBag.Title = "TP6";
+}
+
+<h1>Todos los items de la DB</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Desc</th>
+            <th scope="col">Region ID</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var territory in Model)
+        {
+            <tr>
+                <td scope="row">@territory.ID</td>
+                <td scope="row">@territory.desc</td>
+                <td scope="row">@territory.regiondId</td>
+            </tr>
+        }
+    </tbody>
+</table>

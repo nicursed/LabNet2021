@@ -1,0 +1,62 @@
+﻿@model WebApi.Models.SWView
+@{
+    ViewBag.Title = "SWView";
+}
+<h2>PokeView</h2>
+<table class="table">
+    <tr>
+        <th>
+            Nombre
+        </th>
+        <th>
+            Altura
+        </th>
+        <th>
+            Peso
+        </th>
+        <th>
+            Color de pelo
+        </th>
+        <th>
+            Color de piel
+        </th>
+        <th>
+            Color de ojos
+        </th>
+        <th>
+            Fecha de nacimiento
+        </th>
+        <th>
+            Genero
+        </th>
+        <th></th>
+    </tr>
+    
+<tr>
+    <td>
+        @Html.Display(Model.name)
+    </td>
+    <td>
+        @Html.Display(Model.height)
+    </td>
+    <td>
+        @Html.Display(Model.mass)
+    </td>
+    <td>
+        @Html.Display(Model.hair_color)
+    </td>
+    <td>
+        @Html.Display(Model.skin_color)
+    </td>
+    <td>
+        @Html.Display(Model.eye_color)
+    </td>
+    <td>
+        @Html.Display(Model.birth_year)
+    </td>
+    <td>
+        @Html.Display(Model.gender)
+    </td>
+</tr>
+    
+</table>

@@ -1,0 +1,11 @@
+﻿@model MCV.Models.TerritoriesView
+@{
+    ViewBag.Title = "Borrar";
+}
+
+@using (Html.BeginForm("Borrar", "Territory", FormMethod.Post))
+{
+
+    <label>Busca TerritoryID</label>@Html.TextBoxFor(t => t.ID, new { type = "number", min = "0", max="99999", step = "1" })
+    <input type="submit" class="btn btn-primary" value="Borrar" />
+}

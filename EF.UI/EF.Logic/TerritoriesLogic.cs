@@ -28,7 +28,6 @@ namespace EF.Logic
                 });
                 context.SaveChanges();
                 ShowAll();
-
             }catch(Exception e)
             {
                 Console.WriteLine("ID existente");

@@ -18,8 +18,34 @@ namespace EF.UI
         static void Main(string[] args)
         {
             Program program = new Program();
-            program.ShowMenu();
-            program.code = int.Parse(Console.ReadLine());  
+            /* program.ShowMenu();
+             program.code = int.Parse(Console.ReadLine());
+             territoriesLogic.ShowAll();*/
+            var url = $"https://pokeapi.co/api/v2/pokemon?limit=100&offset=200";
+            var request = (System.Net.HttpWebRequest)System.Net.WebRequest.Create(url);
+            request.Method = "GET";
+            request.ContentType = "application/json";
+            request.Accept = "application/json";
+            try
+            {
+                using (System.Net.WebResponse response = request.GetResponse())
+                {
+                    using (System.IO.Stream strReader = response.GetResponseStream())
+                    {
+                        using (System.IO.StreamReader objReader = new System.IO.StreamReader(strReader))
+                        {
+                            string responseBody = objReader.ReadToEnd();
+                            // Do something with responseBody
+                            Console.WriteLine(responseBody);
+                            Console.ReadLine();
+                        }
+                    }
+                }
+            }
+            catch (System.Net.WebException ex)
+            {
+                // Handle error
+            }
         }
         void ShowMenu()
         {
@@ -45,7 +71,7 @@ namespace EF.UI
                     territoryDescription = Console.ReadLine();
                     Console.WriteLine("Inserte el RegionId");
                     regionId = int.Parse(Console.ReadLine());
-                    territoriesLogic.Add(new Territories { TerritoryDescription = territoryDescription, RegionID = regionId, TerritoryID = territoryId });
+                    //territoriesLogic.Add(territoryId, territoryDescription, regionId);
                     ShowMenu();
                     break;
                 case 2:
@@ -53,7 +79,7 @@ namespace EF.UI
                     territoryId = Console.ReadLine();
                     Console.WriteLine("Inserte el TerritoryDescription a modificar");
                     territoryDescription = Console.ReadLine();
-                    territoriesLogic.Update(new Territories { TerritoryDescription = territoryDescription, TerritoryID = territoryId });
+                    //territoriesLogic.Update(territoryId, territoryDescription);
                     ShowMenu();
                     break;
                 case 3:
